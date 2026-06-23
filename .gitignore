@@ -1,5 +1,23 @@
-dist/
+# Node
 node_modules/
-.wrangler/
+
+# Local env
+.env
+.env.local
 .dev.vars
+
+# Build output
+dist/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# System
+.DS_Store
+npm-debug.log*
+yarn-error.log*
+
+# Wrangler / Cloudflare
+.wrangler/
 worker-configuration.d.ts
