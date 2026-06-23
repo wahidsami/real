@@ -65,8 +65,15 @@ export function ToggleRow({ label, checked, onChange }: { label: string; checked
   );
 }
 
-export function FieldLabel({ children }: { children: React.ReactNode }) {
-  return <div className="field-label text-xs text-slate-400">{children}</div>;
+export function FieldLabel({ labelAr, labelEn, language, children }: { labelAr?: string; labelEn?: string; language?: string; children: React.ReactNode }) {
+  return (
+    <label className="block">
+      {labelAr && labelEn && language && (
+        <span className="block text-xs font-semibold mb-1.5 text-slate-400">{language === 'ar' ? labelAr : labelEn}</span>
+      )}
+      <div className="field-content">{children}</div>
+    </label>
+  );
 }
 
 export default {};

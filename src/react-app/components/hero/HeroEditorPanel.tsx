@@ -497,14 +497,14 @@ export function HeroEditorPanel({
                       <div className="flex items-center gap-2">
                         <input
                           type="color"
-                          value={slide.customOverlay}
+                          value={slide.customOverlay || ''}
                           onChange={(event) => updateSlide(slide.id, { customOverlay: event.target.value })}
                           className="h-10 w-12 shrink-0 rounded border border-slate-800 bg-transparent"
                         />
                         <input
                           type="text"
                           dir="ltr"
-                          value={slide.customOverlay}
+                          value={slide.customOverlay || ''}
                           onChange={(event) => updateSlide(slide.id, { customOverlay: event.target.value })}
                           placeholder="#000000"
                         />
